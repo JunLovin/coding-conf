@@ -47,6 +47,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Said Page](https://www.said-beta.vercel.app)
+- Website - [Said Page](https://said-beta.vercel.app/)
 - Frontend Mentor - [@JunLovin](https://www.frontendmentor.io/profile/junlovin)
 - Twitter - [@junlovin23](https://www.twitter.com/junlovin23)
