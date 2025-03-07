@@ -1,9 +1,11 @@
-import App from '@components/App'
+import App from './App'
+import DefaultError from '@components/DefaultError'
 
 const routes = [
     {
         path: '/',
         element: <App />,
+        errorElement: <DefaultError />
     }
 ]
 
