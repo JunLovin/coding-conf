@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router'
 import Upload from '@public/images/icon-upload.svg'
 import Info from '@public/images/icon-info.svg'
 
@@ -7,6 +8,7 @@ function Form() {
     const [email, setEmail] = useState('')
     const [github, setGithub] = useState('')
     const [pfp, setPfp] = useState<string | null>(null)
+    const navigate = useNavigate()
 
     const handlePfp = (e:React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
@@ -95,7 +97,9 @@ function Form() {
                             </div>
                         </div>
                         <div className="form-button mt-4">
-                            <button className="w-full bg-orange-500 text-slate-950 font-extrabold h-[60px] text-[1.3rem] rounded-2xl cursor-pointer">Generate My Ticket</button>
+                            <button className="w-full bg-orange-500 text-slate-950 font-extrabold h-[60px] text-[1.3rem] rounded-2xl cursor-pointer" onClick={() => {
+                                navigate('/ticket')
+                            }}>Generate My Ticket</button>
                         </div>
                     </form>
                 </div>
