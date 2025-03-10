@@ -4,9 +4,9 @@ import Upload from '@public/images/icon-upload.svg'
 import Info from '@public/images/icon-info.svg'
 
 function Form() {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [github, setGithub] = useState('')
+    const [name, setName] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
+    const [github, setGithub] = useState<string>('')
     const [pfp, setPfp] = useState<string | null>(null)
     const navigate = useNavigate()
 
@@ -67,7 +67,7 @@ function Form() {
                                     <img src={Upload} alt="upload" className="w-[40px] h-[40px]"/>
                                 )}
                                 </div>
-                                <input type="file" id="avatar" name="avatar" className="w-full h-full relative cursor-pointer opacity-0" onChange={handlePfp}/>
+                                <input type="file" id="avatar" name="avatar" accept='image/png, image/jpeg' className="w-full h-full relative cursor-pointer opacity-0" onChange={handlePfp}/>
                                 <p className="absolute top-[75%] left-[50%] translate-[-50%] w-max text-slate-400 text-[1.2rem] z-0">Drag and drop or click to upload</p>
                             </div>
                             <p className="text-slate-400 mt-2"><img src={Info} alt="" className="inline mr-2"/>Upload your photo (JPG or PNG, max size: 500KB)</p>
