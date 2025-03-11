@@ -34,7 +34,7 @@ function Ticket() {
                     </div>
                 </div>
                 <div className="ticket-image">
-                    <div className="ticker-user bg-[url(../../public/images/pattern-ticket.svg)] bg-no-repeat w-[600px] h-[300px] p-6 relative flex flex-col justify-around">
+                    <div className="ticker-user bg-[url(../../images/pattern-ticket.svg)] bg-no-repeat w-[600px] h-[300px] p-6 relative flex flex-col justify-around">
                     <div className="ticket-logo w-full">
                         <img src={Logo} alt="logo"/>
                         <div className="ticket-logo-text">
