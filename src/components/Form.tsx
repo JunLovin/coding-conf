@@ -4,8 +4,12 @@ import { UserContext } from '@components/UserContext'
 import Upload from '@public/images/icon-upload.svg'
 import Info from '@public/images/icon-info.svg'
 
+// In your Form.tsx file, update the context usage:
+
 function Form() {
-    const { userData, setUserData } = useContext(UserContext)
+  // Use the context with proper typing
+  const { userData, setUserData } = useContext(UserContext);
+  
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ emailStatus, setEmailStatus ] = useState(true)

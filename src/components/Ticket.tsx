@@ -14,7 +14,8 @@ function Ticket() {
         return Math.floor(Math.random() * 1000000)
     }
 
-    const handleGithub = (username) => {
+    // Fix the implicit any type
+    const handleGithub = (username: string): void => {
         window.open(`https://github.com/${username}`)
     }
 
