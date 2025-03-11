@@ -15,7 +15,7 @@ function Ticket() {
     }
 
     // Fix the implicit any type
-    const handleGithub = (username: string): void => {
+    const handleGithub = (username: string | undefined): void => {
         window.open(`https://github.com/${username}`)
     }
 
@@ -43,7 +43,7 @@ function Ticket() {
                     </div>
                     <div className="ticket-user flex gap-4">
                         <div className="ticket-user-pfp">
-                            <img src={pfp} alt={name} className="rounded-2xl h-[100px] w-[100px]"/>
+                            <img src={pfp || '/path/to/default-image.jpg'} alt={name} className="rounded-2xl h-[100px] w-[100px]"/>
                         </div>
                         <div className="ticket-user-name flex flex-col items-center justify-center">
                             <h3 className="text-white text-2xl font-bold w-max">{name}</h3>

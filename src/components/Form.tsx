@@ -8,8 +8,8 @@ import Info from '@public/images/icon-info.svg'
 
 function Form() {
   // Use the context with proper typing
-  const { userData, setUserData } = useContext(UserContext);
-  
+    const { setUserData } = useContext(UserContext);
+    
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
     const [ emailStatus, setEmailStatus ] = useState(true)
