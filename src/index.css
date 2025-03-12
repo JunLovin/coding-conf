@@ -3,4 +3,5 @@
 
 @theme {
     --font-inconsolata: 'Inconsolata', sans-serif;
+    --breakpoint-xxs: 31.25rem;
 }
