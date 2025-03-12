@@ -71,13 +71,13 @@ function Form() {
         <section className="form w-full text-white h-[90dvh]">
             <div className="form-container flex flex-col w-full h-full items-center">
                 <div className="form-title w-max h-max">
-                    <h2 className="font-bold text-5xl w-[700px] text-center leading-normal">Your Journey to Coding Conf 2025 Starts Here!</h2>
-                    <div className="form-title-text text-center text-slate-200 leading-normal">
+                    <h2 className="font-bold text-4xl w-[700px] text-center leading-normal">Your Journey to Coding Conf 2025 Starts Here!</h2>
+                    <div className="form-title-text text-center text-slate-200 leading-normal mt-2">
                         <p className="text-[1.2rem]">Secure your spot at next year's biggest coding conference.</p>
                     </div>
                 </div>
                 
-                <div className="form-form mt-8">
+                <div className="form-form mt-4">
                     <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-8">
                         <div className="form-avatar">
                             <div className="avatar-label">
@@ -105,7 +105,7 @@ function Form() {
                             )}
                             {pfpStatus && <p className="text-slate-400 mt-2"><img src={Info} alt="" className="inline mr-2"/>Upload your photo (JPG or PNG, max size: 500KB)</p>}
                         </div>
-                        <div className="form-name mt-4">
+                        <div className="form-name">
                             <div className="name-label">
                                 <label htmlFor="name" className="font-semibold text-[1.1rem]">Full Name</label>
                             </div>
