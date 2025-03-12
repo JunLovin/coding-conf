@@ -6,8 +6,8 @@ import lineBottom from '@public/images/patternBottomDesktop.svg'
 function App() {
   return (
     <>
-    <img src={lineTop} alt="" className="absolute top-0 right-0 -z-0"/>
-    <img src={lineBottom} alt="" className="absolute bottom-0 left-0 -z-1"/>
+    <img src={lineTop} alt="" className="absolute top-0 right-0 -z-10"/>
+    <img src={lineBottom} alt="" className="absolute bottom-0 left-0 -z-10"/>
     <Header/>
     <Form />
     </>
