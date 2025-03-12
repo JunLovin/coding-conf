@@ -13,7 +13,8 @@ This is a solution to the [Conference ticket generator challenge on Frontend Men
 
 ## Overview
 
-![Preview](./public/design/preview.jpg)
+![Preview Form](./public/design/desktop-design-form.jpg)
+![Preview Congrats](./public/design/preview.jpg)
 
 ### The challenge
 
@@ -30,9 +31,12 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshot(s)
 
-![Screenshot](./screenshot.jpg)
+![Main Screenshot](./public/images/mainScreenshot.png)
+![Error Form Screenshot](./public/images/formErrorScreenshot.png)
+![Ticket Screenshot](./public/images/ticketScreenshot.png)
+
 
 ### Links
 
