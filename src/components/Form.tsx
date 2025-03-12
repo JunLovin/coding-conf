@@ -68,22 +68,22 @@ function Form() {
 
     return (
         <>
-        <section className="form w-full text-white h-[90dvh]">
+        <section className="form w-full text-white overflow-hidden">
             <div className="form-container flex flex-col w-full h-full items-center">
                 <div className="form-title w-max h-max">
-                    <h2 className="font-bold text-4xl w-[700px] text-center leading-normal">Your Journey to Coding Conf 2025 Starts Here!</h2>
-                    <div className="form-title-text text-center text-slate-200 leading-normal mt-2">
-                        <p className="text-[1.2rem]">Secure your spot at next year's biggest coding conference.</p>
+                    <h2 className="font-bold text-4xl w-[700px] text-center leading-normal max-xxs:text-2xl max-xxs:w-[80%] max-xxs:mx-auto">Your Journey to Coding Conf 2025 Starts Here!</h2>
+                    <div className="form-title-text text-center text-slate-200 leading-normal max-xxs:p-0 mt-2 max-xxs:m-0 max-xxs:mt-2">
+                        <p className="text-[1.2rem] max-xxs:text-[1rem] max-xxs:w-[60%] max-xxs:mx-auto max-xxs:p-0">Secure your spot at next year's biggest coding conference.</p>
                     </div>
                 </div>
                 
                 <div className="form-form mt-4">
-                    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-8">
+                    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-8 max-xxs:text-center">
                         <div className="form-avatar">
                             <div className="avatar-label">
                                 <label htmlFor="avatar" className="font-semibold text-[1.1rem]">Upload Avatar</label>
                             </div>
-                            <div className="avatar-input mt-[.3rem] w-[500px] h-[175px] border-2 p-4 flex justify-center items-center border-dashed border-slate-600 rounded-2xl bg-slate-600/20 relative">
+                            <div className="avatar-input mt-[.3rem] w-[500px] max-xxs:w-[300px] h-[175px] border-2 p-4 flex justify-center items-center border-dashed border-slate-600 rounded-2xl bg-slate-600/20 relative max-xxs:mx-auto">
                                 <div className="upload-container w-[75px] h-[75px] flex justify-center items-center absolute translate-[-50%] top-[35%] left-[50%] p-2 rounded-2xl border-2  border-slate-700 bg-slate-500/20 cursor-pointer">
                                 {pfp ? (
                                     <img src={pfp} alt="pfp" className="w-full h-full rounded-full"/>
@@ -98,19 +98,19 @@ function Form() {
                                     if (fileInputRef.current) {
                                         fileInputRef.current.click();
                                     }
-                                }}>Change image</span></div>)}{!pfp && (<p className="absolute top-[75%] left-[50%] translate-[-50%] w-max text-slate-400 text-[1.2rem] z-0">Drag and drop or click to upload</p>)}
+                                }}>Change image</span></div>)}{!pfp && (<p className="absolute top-[75%] left-[50%] translate-[-50%] max-xxs:text-[1rem] w-max text-slate-400 text-[1.2rem] z-0">Drag and drop or click to upload</p>)}
                             </div>
                             {!pfpStatus && (
-                                <p className="text-red-400 mt-2"><img src={Info} alt="" className="inline mr-2"/>File too large. Please upload a photo under 500KB.</p>
+                                <p className="text-red-400 mt-2 max-xxs:w-[80%] max-xxs:mx-auto"><img src={Info} alt="" className="inline mr-2"/>File too large. Please upload a photo under 500KB.</p>
                             )}
-                            {pfpStatus && <p className="text-slate-400 mt-2"><img src={Info} alt="" className="inline mr-2"/>Upload your photo (JPG or PNG, max size: 500KB)</p>}
+                            {pfpStatus && <p className="text-slate-400 mt-2 max-xxs:w-[80%] max-xxs:mx-auto"><img src={Info} alt="" className="inline mr-2"/>Upload your photo (JPG or PNG, max size: 500KB)</p>}
                         </div>
                         <div className="form-name">
                             <div className="name-label">
                                 <label htmlFor="name" className="font-semibold text-[1.1rem]">Full Name</label>
                             </div>
                             <div className="name-input">
-                                <input type="text" id="name" name="name" value={name} onChange={handleName} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0"/>
+                                <input type="text" id="name" name="name" value={name} onChange={handleName} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0 max-xxs:w-[300px]"/>
                             </div>
                         </div>
                         <div className="form-email">
@@ -118,9 +118,9 @@ function Form() {
                                 <label htmlFor="email" className="font-semibold text-[1.1rem]">Email Address</label>
                             </div>
                             <div className="email-input relative">
-                                {!emailStatus ? <input type="text" id="email" name="email" placeholder="example@email.com" value={email} onChange={handleEmail} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-red-400 p-4 mt-[.3rem] outline-0"/> : <input type="text" id="email" name="email" placeholder="example@email.com" value={email} onChange={handleEmail} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0"/>}
+                                {!emailStatus ? <input type="text" id="email" name="email" placeholder="example@email.com" value={email} onChange={handleEmail} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-red-400 p-4 mt-[.3rem] outline-0 max-xxs:w-[300px]"/> : <input type="text" id="email" name="email" placeholder="example@email.com" value={email} onChange={handleEmail} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0 max-xxs:w-[300px]"/>}
                                 {!emailStatus && (
-                                    <label htmlFor="email" className="absolute bottom-[-25px] left-0 text-red-400 text-[.9rem]"><img src={Info} alt="" className="inline mr-2"/>Please enter a valid email address.</label>
+                                    <label htmlFor="email" className="absolute bottom-[-25px] left-0 text-red-400 text-[.9rem] max-xxs:w-full"><img src={Info} alt="" className="inline mr-2"/>Please enter a valid email address.</label>
                                 )}
                             </div>
                         </div>
@@ -129,11 +129,11 @@ function Form() {
                                 <label htmlFor="github" className="font-semibold text-[1.1rem]">Github Username</label>
                             </div>
                             <div className="github-input">
-                                <input type="text" id="github" name="github" placeholder="@yourusername" value={github} onChange={handleGithub} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0"/>
+                                <input type="text" id="github" name="github" placeholder="@yourusername" value={github} onChange={handleGithub} className="w-[500px] h-[50px] rounded-2xl bg-slate-600/17 border-2 border-slate-700 p-4 mt-[.3rem] outline-0 max-xxs:w-[300px]"/>
                             </div>
                         </div>
                         <div className="form-button mt-4">
-                            <button className="w-full bg-orange-500 text-slate-950 font-extrabold h-[60px] text-[1.3rem] rounded-2xl cursor-pointer" onClick={() => {
+                            <button className="w-full max-xxs:w-[300px] bg-orange-500 text-slate-950 font-extrabold h-[60px] text-[1.3rem] rounded-2xl cursor-pointer" onClick={() => {
                                 handleSubmit()
                             }}>Generate My Ticket</button>
                         </div>
